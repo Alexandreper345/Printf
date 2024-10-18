@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_hexa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alda-sil <alda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 17:05:19 by alda-sil          #+#    #+#             */
-/*   Updated: 2024/10/18 20:42:04 by alda-sil         ###   ########.fr       */
+/*   Created: 2024/10/18 18:40:26 by alda-sil          #+#    #+#             */
+/*   Updated: 2024/10/18 20:41:49 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *s)
+int	ft_hexa(char *base, unsigned int num)
 {
-	int	i;
+	int	count;
 
-	i = 0;
-	if (!s)
-		ft_putstr("(null)");
-	while (s[i])
-	{
-		i++;
-	}
-	write (1, s, i);
-	return (i);
+	count = 0;
+	if (num >= 16)
+		count += ft_hexa(base, num / 16);
+	count += ft_putchar(base[num % 16]);
+	return (count);
 }
