@@ -6,7 +6,7 @@
 /*   By: alda-sil <alda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 13:46:56 by alda-sil          #+#    #+#             */
-/*   Updated: 2024/10/18 20:41:55 by alda-sil         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:24:52 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ int	ft_putnbr(char *base, int s)
 
 	count = 0;
 	if (s == -2147483648)
-		return (ft_putstr("-2147483648"));
+	{
+		count += ft_putstr("-2147483648");
+		return (count);
+	}
 	if (s < 0)
 	{
 		count += ft_putchar('-');
