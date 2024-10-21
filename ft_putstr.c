@@ -6,7 +6,7 @@
 /*   By: alda-sil <alda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:05:19 by alda-sil          #+#    #+#             */
-/*   Updated: 2024/10/18 20:42:04 by alda-sil         ###   ########.fr       */
+/*   Updated: 2024/10/20 20:58:11 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ int	ft_putstr(char *s)
 
 	i = 0;
 	if (!s)
-		ft_putstr("(null)");
+	{
+		i += ft_putstr("(null)");
+		return (i);
+	}
 	while (s[i])
 	{
 		i++;

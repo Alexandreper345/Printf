@@ -6,7 +6,7 @@
 /*   By: alda-sil <alda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:49:12 by alda-sil          #+#    #+#             */
-/*   Updated: 2024/10/18 20:43:38 by alda-sil         ###   ########.fr       */
+/*   Updated: 2024/10/20 20:37:48 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int	ft_putnbr(char *base, int s);
 int	ft_putnbunsi(unsigned int num);
 int	ft_voidpoint(void *str);
 int	ft_hexa(char *base, unsigned int num);
-int	ft_printf(const char *s, ...)
+int	ft_printf(const char *s, ...);
 
 #endif

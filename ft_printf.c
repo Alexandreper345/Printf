@@ -6,21 +6,17 @@
 /*   By: alda-sil <alda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:33:52 by alda-sil          #+#    #+#             */
-/*   Updated: 2024/10/18 20:41:47 by alda-sil         ###   ########.fr       */
+/*   Updated: 2024/10/20 20:38:24 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-//static int	ft_parametres()
-
 int	ft_printf(const char *s, ...)
 {
 	va_list	list;
-	int		i;
 	int		count;
 
-	i = 0;
 	count = 0;
 	va_start(list, s);
 	while (*s)
@@ -50,5 +46,5 @@ int	ft_printf(const char *s, ...)
 		s++;
 	}
 	va_end(list);
-	return (0);
+	return (count);
 }
